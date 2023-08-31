@@ -108,7 +108,7 @@ height: 100vh;
     font-size: 2rem;
     font-weight: 600;
     padding: .5rem 0 .5rem 0;
-    color: #fff;
+    color: #000;
     line-height: 1rem;
 }
 
@@ -133,7 +133,7 @@ height: 100vh;
 .container .code-container .right label i{
     padding: 0 .3rem;
     font-size: 30px;
-    color: #fff;
+    color: #000;
 }
 
 @media (width< 700px){
