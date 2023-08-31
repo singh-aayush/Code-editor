@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+    --popin: "Poppins", cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+height: 100vh;
+    
+    background-color: #2a2a2a;
+    font-family: var(--popin);
+}
+
+.container .title-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.container .title-name>h1{
+    position: relative;
+    font-size: 3rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    /* text-transform: uppercase; */
+}
+
+.container .title-name>h1::before{
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    height: 100%;
+    color: #fff;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+
+.container .code-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 2rem
+}
+
+.container .code-container .left{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container .code-container .left label{
+    font-size: 1.5rem;
+    padding: 0.5rem 0 .5rem 0;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.container .code-container .left label i{
+    padding: 0 .3rem;
+    font-size: 30px;
+}
+
+.container .code-container .left textarea{
+    width: 95%;
+    height: 20vh;
+    border-radius: 7px;
+    margin: 1rem 0;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    padding: .5rem .5rem;
+    font-size: 14px;
+    font-family: var(--popin);
+    color: #fff;
+    background: #000;
+    overflow-y: scroll;
+}
+
+.container .code-container .left textarea:hover{
+    border-color: #fff;
+    opacity: 0.8;
+}
+
+.container .code-container .right{
+    width: 100%;
+}
+
+.container .code-container .right label{
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .5rem 0 .5rem 0;
+    color: #fff;
+    line-height: 1rem;
+}
+
+#output{
+    width: 100%;
+    height: 90%;
+    margin: 1rem 0;
+    border-radius: 7px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    padding: .5rem .5rem;
+    font-family: var(--popin);
+    color: #000;
+    font-size: 16px;
+}
+#output:hover{
+    border-color: #000;
+    opacity: .6;
+}
+
+.container .code-container .right label i{
+    padding: 0 .3rem;
+    font-size: 30px;
+    color: #fff;
+}
+
+@media (width< 700px){
+    .container .code-container .left{
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: .5rem;
+    }
+
+    .container .code-container .left textarea:hover{
+        border-color: #fff;
+    }
+
+    .container .code-container{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    #output-text{
+        padding: 0.3rem .3rem;
+    }
+}

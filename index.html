@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Editor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ICON LINK -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="container">
+      <div class="title-name">
+      <h1 class="title" data-text="CODERS...">CODERS...</h1>
+    </div>
+      <div class="code-container">
+        <div class="left">
+          <div class="html-section">
+          <label> <i class="bx bxl-html5"></i>HTML</label>
+          <textarea
+           
+            spellcheck="false"
+            id="html-text"
+          ></textarea>
+        </div>
+        <div class="css-section">
+          <label class="css-name"> <i class="bx bxl-css3"></i>CSS</label>
+          <textarea  spellcheck="false" id="css-text"></textarea>
+        </div>
+        <div class="js-section">
+          <label> <i class="bx bxl-javascript"></i>JAVASCRIPT </label>
+          <textarea  spellcheck="false" id="js-text"></textarea>
+        </div>
+        </div>
+        <div class="right">
+          <label> <i class="bx bx-play"></i>OUTPUT</label>
+          <iframe id="output"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="index.js" type="text/JAVASCRIPT"></script>
+  </body>
+</html>
